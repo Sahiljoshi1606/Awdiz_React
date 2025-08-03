@@ -1,27 +1,31 @@
-import { Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/home.jsx";
-import Profile from "./pages/profile.jsx";
-import { Route } from "react-router-dom";
-import Login from "./pages/login.jsx";
-import Register from "./pages/register.jsx";
-import Navbar from "./component/Navbar.jsx";
-import UseState from "./pages/30-07/useState.jsx";
-import UseEffect from "./pages/30-07/useEffect.jsx";
-  function App() {
+import React from 'react'
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Navbar from './component/Navbar';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import { Route, Routes } from 'react-router-dom'; 
+ 
+import UseState from './pages/30-07/usestate';
+import UseEffect from './pages/30-07/useeffect';
+
+
+function App() {
+  console.log("Mumbai");
+  <Navbar />
   return (
-    <div>
-      < Navbar />
+    <>
+    <Navbar /> 
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/usestate" element={<UseState />} />
-        <Route path="/useeffect" element={<UseEffect />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/use-state' element={<UseState />} />
+        <Route path='/use-effect' element={<UseEffect />} /> 
       </Routes>
-    </div>
-      );
+    </>
+  );
 }
 
 export default App;

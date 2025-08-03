@@ -1,22 +1,37 @@
-import React from "react";
-import { useState as UseState } from "react";
+import React, { useState } from 'react'
 
+const UseState = () => {
 
-const useState = () => {
-  const [count, setCount] = UseState(0);
-  const [greeting, setGreeting] = UseState("Hello, World!");
+    // const counter = 234;
 
-  return (
-    <div>
-        <h1>{greeting}</h1>
-        <button onClick={() => setGreeting("Welcome!")}>Change Greeting</button>
-      <h1>Count: {count}</h1>
-      <button onClick={() => { if (count < 10) setCount(count + 1); }}>Increment</button>
-      <button onClick={() => { if (count > 0) setCount(count - 1); }}>Decrement</button>
-      <button onClick={() => setCount(0)}>Reset</button>
-      
-    </div>
-  );
-};
+    const [counter, setCounter] = useState(1);
+    console.log(counter, "counter");
 
-export default useState;
+    const [greeting, setGreeting] = useState("Hello World!");
+
+    const increament = () => {
+        if(counter < 10){
+            setCounter(counter + 1);
+        }
+    };
+    const decreament = () => {
+        if(counter > 1){
+            setCounter(counter - 1);
+        }
+    };
+    const reset = () => {
+        setCounter(1);
+    };
+    return (
+        <div>
+            <h2>{greeting}</h2>
+            <button onClick={() => setGreeting("Welcome.")}>Change Greeting</button>
+            <h1>Counter: {counter}</h1>
+            <button onClick={increament}>Increament</button>
+            <button onClick={decreament}>Decreament</button>
+            <button onClick={reset}>Reset</button>
+        </div>
+    );
+}
+
+export default UseState;
