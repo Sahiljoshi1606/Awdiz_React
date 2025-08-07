@@ -8,7 +8,11 @@ import { Route, Routes } from 'react-router-dom';
  
 import UseState from './pages/30-07/useState';
 import UseEffect from './pages/30-07/useEffect';
-import UseParams from './pages/01-08/useParams';
+import UseParams from './pages/01-08/UseParams';
+import StyleComponent from './pages/02-08/StyleComponent';
+
+
+
 
 function App() {
   console.log("Mumbai");
@@ -24,6 +28,9 @@ function App() {
         <Route path='/Use-state' element={<UseState />} />
         <Route path='/Use-effect' element={<UseEffect />} /> 
         <Route path='/Use-Params/:id' element={<UseParams />} /> 
+     <Route path='/Style-Component' element={<StyleComponent />} />
+
+
       </Routes>
     </>
   );
