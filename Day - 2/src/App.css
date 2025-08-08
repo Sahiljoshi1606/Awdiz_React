@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Optional dark background */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Center only the main content */
+.main-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  min-height: 100vh;       /* Full height */
+}
