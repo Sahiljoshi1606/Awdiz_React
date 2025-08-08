@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DynamicStyles.css'; 
+import "./DynamicStyle.css"
 
 
 // Reusable Button component
