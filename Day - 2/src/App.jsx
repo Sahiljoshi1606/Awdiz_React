@@ -12,6 +12,8 @@ import UseParams from "./pages/01-08/UseParams";
 import StyleComponent from "./pages/02-08/StyleComponent";
 import CreateFruit from "./pages/02-08/CreateFruit";
 import DynamicStyles from "./pages/03-08/DynamicStyles";
+import PageNotFound from './pages/06-08/pageNotFound';
+import FetchData from './pages/06-08/FetchData';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/Style-Component" element={<StyleComponent />} />
         <Route path="/Create-Fruit" element={<CreateFruit />} />
         <Route path="/dynamic-styles" element={<DynamicStyles />} />
+        <Route path='/*' element={<PageNotFound />} />
+        <Route path='/FetchData' element={<FetchData />} />
       </Routes>
     </>
   );
